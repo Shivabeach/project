@@ -1,0 +1,23 @@
+@use '../abstracts' as *
+/* main theme colors */
+
+body
+	@include angle-grad(45deg,yellow, $milano-red)
+
+.text--color
+	background-color: $vintage-brown
+	color: set-text-color(#F0BCAD)
+
+header
+	background: #197059
+	border: inset .5rem #6DC5AE
+	outline: .175rem groove #B06853
+	outline-offset: .15rem
+	border-radius: 10px
+
+footer
+	//background-image: url("../images/Untitled.jpg")
+
+.one:has(p)
+	color: $neon-carrot
+

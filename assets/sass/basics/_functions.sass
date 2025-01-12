@@ -1,0 +1,33 @@
+@use '../abstracts' as *
+
+//! map for input size
+
+@each $size, $wide in $map1
+	.input-#{$size}
+		width: $wide
+
+//function to convert px to vw
+
+@function size($num)
+	@return #{$num / 2}vw
+@for $i from 1 through 10
+	.fs-#{$i}
+		font-size: size($i)
+
+@function weight($num)
+	@return	($num * 100)
+@for $i from 2 through 9
+	.bold-#{$i}
+		font-weight: weight($i)
+
+@function margin($value)
+	@return	($value * 1px)
+@for $i from 1 through 10
+	.margin-#{$i}
+		margin: margin($i)
+
+@function padd($value)
+	@return	($value * 1rem)
+@for $i from 1 through 10
+	.padding-#{$i}
+		padding: padd($i)

@@ -1,0 +1,736 @@
+/** @format */
+/** @format */
+/** @format */
+:root {
+  --yellow-hue: 60;
+  --green-hue: 120;
+  --cyan-hue: 160;
+  --blue-hue: 240;
+  --magenta-hue: 300;
+  --col-color: #AB8E00;
+  --prime-text: #251EF7;
+  --very-peri: #6868AC;
+  --granite-green: #85A094;
+}
+
+/** @format */
+/**
+ * The new CSS Reset - version 1.3.1
+ * @format
+ */
+/* Remove list styles (bullets/numbers) */
+ol,
+ul {
+  list-style: none;
+  margin-left: 0.252rem;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/** @format */
+/**
+ * Box sizing rules
+ *
+ * @format
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input[type=text],
+input[type=date],
+select,
+textarea {
+  font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-size: 1.15rem;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/** @format */
+/* body */
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+  width: 1.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: #fad590;
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f8740b;
+  border-radius: 100vw;
+}
+
+@supports (scrollbar-color: #6724e1 #7073e2) {
+  * {
+    scrollbar-color: #6724e1 #7073e2;
+    scrollbar-width: auto;
+  }
+}
+/** @format */
+/* Elements */
+blockquote {
+  margin-left: 2rem;
+  border-left: 1px solid #d2691e;
+  padding-left: 1rem;
+}
+
+.counter {
+  counter-reset: counter;
+}
+
+.article-counter {
+  counter-reset: article-counter;
+}
+
+.comment-container > .count::before {
+  content: counter(counter);
+  counter-increment: counter;
+  color: whitesmoke;
+  padding-right: 7px;
+  font-size: 22px;
+}
+
+.comment-container > .article-counter::before {
+  content: counter(article-counter);
+  counter-increment: article-counter;
+  color: whitesmoke;
+  padding-right: 7px;
+  font-size: 22px;
+}
+
+.comment-container > .counts::before {
+  content: counter(counter);
+  counter-increment: counter;
+  color: whitesmoke;
+  padding-right: 7px;
+  font-size: 22px;
+}
+
+.comment-container > .art-counter::before {
+  content: counter(art-counter);
+  counter-increment: art-counter;
+  color: whitesmoke;
+  padding-right: 7px;
+  font-size: 22px;
+}
+
+article {
+  padding: 5px;
+}
+
+.one > p,
+.four > p {
+  padding: 10px;
+}
+
+footer {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.count:first-of-type,
+.article-counter:first-of-type {
+  margin-top: 1rem;
+}
+
+.aldente {
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}
+
+.colors {
+  color: #6DC5AE;
+}
+
+/** @format */
+/* Links */
+a {
+  color: #6DC5AE;
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-weight: 800;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+a:visited {
+  color: #F0BCAD;
+}
+a:hover {
+  color: #7fccb8;
+}
+
+.inline-list {
+  display: inline;
+}
+
+header a:link {
+  padding: 5px 8px;
+}
+
+/** @format */
+/* typography */
+h1,
+h2 {
+  letter-spacing: 2px;
+}
+
+strong {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+code {
+  font-family: "Courier New", "Courier", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+  margin-bottom: 0.75rem;
+}
+
+h5 {
+  font-size: 20px;
+  margin-bottom: 0.75rem;
+}
+
+h6 {
+  font-size: 16px;
+  margin-bottom: 0.75rem;
+}
+
+.fz75 {
+  font-size: 0.75rem;
+}
+
+/** @format */
+button {
+  font-family: "Consolas", "monaco", monospace;
+  font-size: 18px;
+  color: #f1f1d5;
+  padding: 8px 15px;
+  background: #4A85D1;
+  border-radius: 5px;
+}
+button:hover {
+  background: hsl(180, 79.19%, 66.08%);
+  color: #36013f;
+  box-shadow: 2px 2px 2px #7073e2;
+}
+
+form {
+  margin-left: 1rem;
+}
+
+input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+  background: white;
+  position: relative;
+  border-radius: 5px;
+}
+
+input[type=checkbox]:checked {
+  background-color: green;
+}
+
+label {
+  display: block;
+}
+
+/** @format */
+.input-small {
+  width: 10%;
+}
+
+.input-date {
+  width: 15.625%;
+}
+
+.input-med {
+  width: 33.3333333333%;
+}
+
+.input-med-lg {
+  width: 50%;
+}
+
+.input-large {
+  width: 75.7575757576%;
+}
+
+.input-full {
+  width: 100%;
+}
+
+.fs-1 {
+  font-size: 0.5vw;
+}
+
+.fs-2 {
+  font-size: 1vw;
+}
+
+.fs-3 {
+  font-size: 1.5vw;
+}
+
+.fs-4 {
+  font-size: 2vw;
+}
+
+.fs-5 {
+  font-size: 2.5vw;
+}
+
+.fs-6 {
+  font-size: 3vw;
+}
+
+.fs-7 {
+  font-size: 3.5vw;
+}
+
+.fs-8 {
+  font-size: 4vw;
+}
+
+.fs-9 {
+  font-size: 4.5vw;
+}
+
+.fs-10 {
+  font-size: 5vw;
+}
+
+.bold-2 {
+  font-weight: 200;
+}
+
+.bold-3 {
+  font-weight: 300;
+}
+
+.bold-4 {
+  font-weight: 400;
+}
+
+.bold-5 {
+  font-weight: 500;
+}
+
+.bold-6 {
+  font-weight: 600;
+}
+
+.bold-7 {
+  font-weight: 700;
+}
+
+.bold-8 {
+  font-weight: 800;
+}
+
+.bold-9 {
+  font-weight: 900;
+}
+
+.margin-1 {
+  margin: 1px;
+}
+
+.margin-2 {
+  margin: 2px;
+}
+
+.margin-3 {
+  margin: 3px;
+}
+
+.margin-4 {
+  margin: 4px;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
+.margin-6 {
+  margin: 6px;
+}
+
+.margin-7 {
+  margin: 7px;
+}
+
+.margin-8 {
+  margin: 8px;
+}
+
+.margin-9 {
+  margin: 9px;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.padding-1 {
+  padding: 1rem;
+}
+
+.padding-2 {
+  padding: 2rem;
+}
+
+.padding-3 {
+  padding: 3rem;
+}
+
+.padding-4 {
+  padding: 4rem;
+}
+
+.padding-5 {
+  padding: 5rem;
+}
+
+.padding-6 {
+  padding: 6rem;
+}
+
+.padding-7 {
+  padding: 7rem;
+}
+
+.padding-8 {
+  padding: 8rem;
+}
+
+.padding-9 {
+  padding: 9rem;
+}
+
+.padding-10 {
+  padding: 10rem;
+}
+
+/** @format */
+/** @format */
+/*list properties */
+.item {
+  padding-right: 1rem;
+  font-size: 18px;
+}
+
+/** @format */
+/**
+ * Cards
+ *
+ * @format
+ */
+.circle {
+  float: left;
+  margin: 10px;
+  shape-outside: circle(50%);
+  display: grid;
+  place-items: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: #a0838f;
+  color: #cdb97d;
+}
+
+/** @format */
+/*Common*/
+.underline {
+  border-bottom: 1px solid #000;
+}
+
+.error {
+  color: #841B2D;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.text-small {
+  font-size: 0.85rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.ital {
+  font-style: italic;
+  font-variant: small-caps;
+}
+
+.current {
+  background: hsl(286, 96%, 98%);
+  color: hsl(233, 36%, 70%) !important;
+  text-decoration: underline;
+}
+
+.white {
+  color: hsl(286, 96%, 98%);
+}
+
+/** @format */
+/* main theme colors */
+body {
+  background: linear-gradient(45deg, yellow, hsl(6.29, 100%, 41.18%));
+}
+
+.text--color {
+  background-color: hsl(14, 63%, 27%);
+  color: #F0BCAD;
+}
+
+header {
+  background: #197059;
+  border: inset 0.5rem #6DC5AE;
+  outline: 0.175rem groove #B06853;
+  outline-offset: 0.15rem;
+  border-radius: 10px;
+}
+
+.one:has(p) {
+  color: #ff9933;
+}
+
+/** @format */
+.dark {
+  background-color: #521B29;
+  color: white;
+}
+
+/** @format */
+/**
+ * All prime container properties
+ *
+ * @format
+ */
+.container, header {
+  width: 95%;
+  margin: auto;
+}
+
+.page {
+  display: grid;
+  width: 85%;
+  margin-inline: auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  font-family: "Georgia", "Times", "Times New Roman", serif;
+  font-size: 3rem;
+}
+
+.top {
+  margin-top: 8px;
+}
+
+/** @format */
+/** @format */
+/** Elements.scss */
+.one {
+  grid-column: 1/3;
+}
+
+.two {
+  grid-column: 3/7;
+}
+
+.three {
+  grid-column: 7/11;
+}
+
+.four {
+  grid-column: 11/13;
+}
+
+footer {
+  grid-column: 1/13;
+}
+
+.page {
+  margin-top: 2rem;
+}
+
+.one,
+.two,
+.three,
+.four {
+  border-radius: 12px;
+}
+
+/** @format */
+/* Calendar if needed */
+.calendar {
+  background: #CFC79E;
+  padding: 1em;
+  border: 2px solid #000;
+  width: 100%;
+}
+
+.day {
+  padding: 2px;
+  height: 10em;
+  vertical-align: top;
+  width: 14.2857142857%;
+}
+
+.highlight {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Geneva", "Verdana", sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #050533;
+  background: #FE5532;
+}
+
+.day_num {
+  color: #00007F;
+  vertical-align: top;
+  font-family: "Consolas", "monaco", monospace;
+}
+
+.content {
+  color: #211E9C;
+}
+
+th {
+  text-align: center;
+}
+
+.coloring {
+  background: #1313be;
+}
+
+.size {
+  color: #000;
+  text-align: center;
+}
+
+.thheader {
+  color: #050533;
+}
+
+/*# sourceMappingURL=main.css.map */

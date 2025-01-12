@@ -1,0 +1,61 @@
+/* Elements */
+@use '../abstracts' as *
+blockquote
+	margin-left: 2rem
+	border-left: 1px solid $chocolate
+	padding-left: 1rem
+
+.counter
+	counter-reset: counter
+.article-counter
+	counter-reset: article-counter
+
+.comment-container > .count::before
+	content: counter(counter)
+	counter-increment: counter
+	color: whitesmoke
+	padding-right: 7px
+	font-size: 22px
+
+.comment-container > .article-counter::before
+	content: counter(article-counter)
+	counter-increment: article-counter
+	color: whitesmoke
+	padding-right: 7px
+	font-size: 22px
+
+.comment-container > .counts::before
+	content: counter(counter)
+	counter-increment: counter
+	color: whitesmoke
+	padding-right: 7px
+	font-size: 22px
+
+.comment-container > .art-counter::before
+	content: counter(art-counter)
+	counter-increment: art-counter
+	color: whitesmoke
+	padding-right: 7px
+	font-size: 22px
+
+article
+	padding: 5px
+
+.one > p,
+.four > p
+	padding: 10px
+
+footer
+	margin-top: 0
+	padding-top: 0
+
+.count:first-of-type,
+.article-counter:first-of-type
+	margin-top: 1rem
+
+.aldente
+	padding-left: 1rem
+	font-size: 1.1rem
+
+.colors
+	color: #6DC5AE

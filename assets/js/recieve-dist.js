@@ -1,0 +1,2 @@
+"use strict";var facts=[];function recieve(){var t=localStorage.getItem("records");null!=t&&displayStore(facts=JSON.parse(t))}function displayStore(t){t.forEach((function(t){var e='<article class="count"><span class="text--color aldente">'.concat(t.content,' - <b class="colors">').concat(t.category,"</b></span> </article>");comment.insertAdjacentHTML("afterbegin",e)}))}addEventListener("DOMContentLoaded",(function(){recieve()}));
+//# sourceMappingURL=recieve-dist.js.map

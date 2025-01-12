@@ -1,0 +1,20 @@
+/**
+ * Cards
+ *
+ * @format
+ */
+
+@use '../abstracts' as *;
+
+.circle {
+	float: left;
+	margin: 10px;
+	shape-outside: circle(50%);
+	display: grid;
+	place-items: center;
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	background-color: #a0838f;
+	color: #cdb97d;
+}
