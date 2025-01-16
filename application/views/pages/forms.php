@@ -8,7 +8,7 @@
 	<li><?php echo anchor("pages/", "Home", 'class="links"');?><span class="linker"></span></li>
 	<li><?php echo anchor("pages/forms", "Forms");?></li>
 	</ul>
-	<div class="hello"></div>
+	<h3 class="hello bold-8"></h3>
 </div>
 <div class="two text--color">
 	<section>

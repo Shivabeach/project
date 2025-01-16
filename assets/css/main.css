@@ -167,6 +167,10 @@ blockquote {
   counter-reset: article-counter;
 }
 
+.art-counter {
+  counter-reset: art-counter;
+}
+
 .comment-container > .count::before {
   content: counter(counter);
   counter-increment: counter;
@@ -183,15 +187,7 @@ blockquote {
   font-size: 22px;
 }
 
-.comment-container > .counts::before {
-  content: counter(counter);
-  counter-increment: counter;
-  color: whitesmoke;
-  padding-right: 7px;
-  font-size: 22px;
-}
-
-.comment-container > .art-counter::before {
+.comments-container > .counts::before {
   content: counter(art-counter);
   counter-increment: art-counter;
   color: whitesmoke;
@@ -225,6 +221,12 @@ footer {
 
 .colors {
   color: #6DC5AE;
+}
+
+.hello {
+  text-align: center;
+  color: rgb(175, 169, 157);
+  text-shadow: 2px 1px 3px black, -2px -1px white;
 }
 
 /** @format */
@@ -536,8 +538,17 @@ label {
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  background-color: #a0838f;
+  background-color: #6868AC;
   color: #cdb97d;
+}
+
+@property --lewd {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #6868AC;
+}
+.mango {
+  background-color: var(--lewd);
 }
 
 /** @format */

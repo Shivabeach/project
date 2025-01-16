@@ -8,7 +8,9 @@
 		<li><?php echo anchor("pages/", "Home");?></li>
 		<li><?php echo anchor("pages/forms", "Forms");?></li>
 	</ul>
-	<div class="hello"></div>
+	<h3 class="hello bold-8"></h3>
+
+	<div class="mango">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, deserunt.</div>
 </div>
 <div class="two text--color counter">
 	<section>
@@ -38,7 +40,7 @@
 	</form>
 	</article>
 
-<div class="comment-container"></div>
+<div class="comments-container"></div>
 </section>
 </div>
 
@@ -56,5 +58,6 @@
 </main>
 <script type="text/javascript" src="<?php echo base_url('assets/dist/js/script-dist.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/dist/js/form-dist.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/dist/js/recieve-dist.js');?>"></script>
 </body>
 </html>

@@ -9,6 +9,8 @@ blockquote
 	counter-reset: counter
 .article-counter
 	counter-reset: article-counter
+.art-counter
+	counter-reset: art-counter
 
 .comment-container > .count::before
 	content: counter(counter)
@@ -24,14 +26,8 @@ blockquote
 	padding-right: 7px
 	font-size: 22px
 
-.comment-container > .counts::before
-	content: counter(counter)
-	counter-increment: counter
-	color: whitesmoke
-	padding-right: 7px
-	font-size: 22px
 
-.comment-container > .art-counter::before
+.comments-container > .counts::before
 	content: counter(art-counter)
 	counter-increment: art-counter
 	color: whitesmoke
@@ -59,3 +55,9 @@ footer
 
 .colors
 	color: #6DC5AE
+
+.hello
+	text-align: center
+	color: $car-tan
+	text-shadow: 2px 1px 3px black,-2px -1px white
+

@@ -66,3 +66,12 @@ switch (new Date().getDay()) {
 		day = 'unknown';
 }
 document.getElementById('demo').innerHTML = 'Today is ' + day;
+
+// Retrieve the current records from localStorage
+let records = JSON.parse(localStorage.getItem('records')); // Check if records is an array
+if (Array.isArray(records)) {
+	records.splice(6, 1);
+	localStorage.setItem('records', JSON.stringify(records));
+} else {
+	console.error('Records is not an array or does not exist in localStorage.');
+}
