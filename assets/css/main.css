@@ -229,6 +229,12 @@ footer {
   text-shadow: 2px 1px 3px black, -2px -1px white;
 }
 
+.notes {
+  margin: 3rem;
+  font-size: 1.2rem;
+  color: rgb(230, 230, 76);
+}
+
 /** @format */
 /* Links */
 a {

@@ -9,6 +9,8 @@ import {
 let facts = [];
 const form = document.querySelector('#form_update');
 const comment = document.querySelector('.comment-container');
+const think = document.querySelector('.think');
+const notes = document.querySelector('.notes');
 
 //collect values from form, then send them to local storage functin
 function arr() {
@@ -31,6 +33,7 @@ function recieve() {
 	if (getRecord != null) {
 		facts = JSON.parse(getRecord);
 		displayStore(facts);
+		//catCount(facts);
 	}
 }
 //display records on prime
@@ -42,6 +45,18 @@ function displayStore(facts) {
 		});
 	}
 }
+
+// function catCount(facts) {
+// 	const result = facts.filter((item) => item.category === item.category);
+// 	// console.log(result);
+// 	result.forEach(function (items) {
+// 		const html = `<li>${items.category} - ${items.category.length}</li>`;
+// 		counting.innerHTML = html;
+// 	});
+// }
+
+// addEventListener('DOMContentLoaded', catCount);
+
 if (form != null) {
 	form.addEventListener('submit', (e) => {
 		e.preventDefault();
@@ -52,3 +67,9 @@ if (form != null) {
 addEventListener('DOMContentLoaded', () => {
 	recieve();
 });
+
+if (think) {
+	think.addEventListener('keyup', () => {
+		notes.textContent = think.value;
+	});
+}

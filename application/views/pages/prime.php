@@ -7,10 +7,12 @@
 	<ul>
 		<li><?php echo anchor("pages/", "Home");?></li>
 		<li><?php echo anchor("pages/forms", "Forms");?></li>
+		<li><?php echo anchor("pages/colors", "Colors");?></li>
 	</ul>
-	<h3 class="hello bold-8"></h3>
+	<h3 class="hello bold-7"></h3>
 
-	<div class="mango">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, deserunt.</div>
+	<ul class="category-count">
+	</ul>
 </div>
 <div class="two text--color counter">
 	<section>

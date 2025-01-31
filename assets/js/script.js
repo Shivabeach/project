@@ -54,4 +54,4 @@ switch (new Date().getDay()) {
 	default:
 		day = 'unknown';
 }
-hello.innerHTML = `Happy ${day}`;
+hello.innerHTML = `Today is ${day}`;

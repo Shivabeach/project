@@ -1,0 +1,2 @@
+"use strict";var three=document.querySelector(".three"),color=document.querySelector("#color");function colorize(){var e=document.querySelector(".color1").value,o=document.querySelector(".color2").value;three.style.backgroundImage="linear-gradient(40deg, ".concat(e,", ").concat(o,")")}color.addEventListener("submit",(function(e){e.preventDefault(),colorize()}));
+//# sourceMappingURL=colors-dist.js.map

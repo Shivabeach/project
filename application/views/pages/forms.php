@@ -5,8 +5,9 @@
 	<header class="container top">Lessons</header>
 	<p>Lessons I have learned about my diabetes</p>
 	<ul>
-	<li><?php echo anchor("pages/", "Home", 'class="links"');?><span class="linker"></span></li>
-	<li><?php echo anchor("pages/forms", "Forms");?></li>
+		<li><?php echo anchor("pages/", "Home", 'class="links"');?><span class="linker"></span></li>
+		<li><?php echo anchor("pages/forms", "Forms");?></li>
+		<li><?php echo anchor("pages/colors", "Colors");?></li>
 	</ul>
 	<h3 class="hello bold-8"></h3>
 </div>
@@ -25,17 +26,14 @@
 			<option value="Daily">Daily</option>
 		</select>
 		<p>
-		<button type="submit" class="submit">Submit</button></p>
-		<p><button type="reset" class="reset">Reset</button></p>
+		<button type="submit" class="submit">Submit</button>&nbsp;<button type="reset" class="reset">Reset</button></p>
 	</fieldset></form>
 </section>
 </div>
 <div class="three text--color article-counter">
-<header class="container top">Exercise</header>
+<header class="container top">Notes</header>
 <section>
-
-<article class="article-counter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, aliquid.</article>
-
+<div class="notes"></div>
 </section>
 </div>
 <div class="four text--color">

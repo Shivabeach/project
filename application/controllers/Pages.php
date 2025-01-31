@@ -17,6 +17,13 @@ class Pages extends CI_Controller {
 		$this->load->view("header/header", $data);
 		$this->load->view("pages/forms", $data);
 	}
+	public function colors()
+	{
+		$data["title"] = "Color Prime";
+		$data["header"] = "Color Vision";
+		$this->load->view("header/header", $data);
+		$this->load->view("pages/colors", $data);
+	}
 
 }
 
