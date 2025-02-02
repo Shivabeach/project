@@ -544,8 +544,8 @@ label {
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  background-color: #6868AC;
-  color: #cdb97d;
+  background-image: radial-gradient(#ffff80, #004000, #ffff80);
+  color: #004000;
 }
 
 @property --lewd {
@@ -614,7 +614,6 @@ body {
 }
 
 header {
-  background: #197059;
   border: inset 0.5rem #6DC5AE;
   outline: 0.175rem groove #B06853;
   outline-offset: 0.15rem;

@@ -15,8 +15,12 @@
 	height: 120px;
 	width: 120px;
 	border-radius: 50%;
-	background-color: $very-peri;
-	color: #cdb97d;
+	background-image: radial-gradient(
+		map-get($radial, 'color1'),
+		map-get($radial, 'color2'),
+		map-get($radial, 'color3')
+	);
+	color: #004000;
 }
 
 @property --lewd {

@@ -16,18 +16,22 @@
 	<header class="container top">Color Picker</header>
 	<form action="" id="color">
 		<input type="color" class="color1"><br/>
-		<input type="color" class="color2">
+		<input type="color" class="color2"><br/>
+		<input type="color" class="color3"><br/>
+		Linear: <input type="checkbox" name="" id="" class="linear"><br/>
+		Radial: <input type="checkbox" name="" id="" class="radial">
 		<p>
 		<button type="submit" class="submit">Submit</button>&nbsp;<button type="reset" class="reset">Reset</button></p>
 	</form>
+	<section class="values"></section>
 </div>
+
 </section>
+
 </div>
 <div class="three">
 <header class="container top">Categories</header>
-<section>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Impedit doloribus obcaecati voluptatum, praesentium quo. Molestiae rerum est officia veniam iure dolorum aliquid sapiente! Libero, neque.</p>
-</section>
+
 </div>
 <div class="four text--color">
 <header class="container top">TBD</header>
