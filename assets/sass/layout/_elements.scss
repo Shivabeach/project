@@ -16,6 +16,9 @@
 .four {
 	grid-column: 11/13;
 }
+.full {
+	grid-column: 3 / 11;
+}
 footer {
 	grid-column: 1/13;
 }
@@ -23,6 +26,7 @@ footer {
 	margin-top: 2rem;
 }
 
+.full,
 .one,
 .two,
 .three,

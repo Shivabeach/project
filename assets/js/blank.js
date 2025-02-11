@@ -75,3 +75,81 @@ if (Array.isArray(records)) {
 } else {
 	console.error('Records is not an array or does not exist in localStorage.');
 }
+//From https://github.com/john-smilga/javascript-basic-projects/blob/master/08-menu/final/app.js
+// https://www.youtube.com/watch?v=3PHXvlpOkf4&t=5943s
+function displayMenuButtons() {
+	const categories = menu.reduce(
+		function (values, item) {
+			if (!values.includes(item.category)) {
+				values.push(item.category);
+			}
+			return values;
+		},
+		['all']
+	);
+	const categoryBtns = categories
+		.map(function (category) {
+			return `<button type="button" class="filter-btn" data-id=${category}>
+          ${category}
+        </button>`;
+		})
+		.join('');
+	btnContainer.innerHTML = categoryBtns;
+	const filterBtns = btnContainer.querySelectorAll('.filter-btn');
+	console.log(filterBtns);
+
+	filterBtns.forEach(function (btn) {
+		btn.addEventListener('click', function (e) {
+			// console.log(e.currentTarget.dataset);
+			const category = e.currentTarget.dataset.id;
+			const menuCategory = menu.filter(function (menuItem) {
+				// console.log(menuItem.category);
+				if (menuItem.category === category) {
+					return menuItem;
+				}
+			});
+			if (category === 'all') {
+				diplayMenuItems(menu);
+			} else {
+				diplayMenuItems(menuCategory);
+			}
+		});
+	});
+}
+// ==========================================================================
+// retrieve one key from local storage
+// ==========================================================================
+// Step 1: Retrieve the records from local storage
+
+// Step 1: Retrieve the records from local storage
+let records = JSON.parse(localStorage.getItem('records'));
+
+// Step 2: Separate the category values
+let categories = records.map((record) => record.category);
+
+// Step 3: Map the values
+let categoryMap = categories.reduce((acc, category) => {
+	acc[category] = (acc[category] || 0) + 1;
+	return acc;
+}, {});
+
+// Step 4: Determine the lengths of each category
+let categoryLengths = {};
+for (let category in categoryMap) {
+	categoryLengths[category] = categoryMap[category];
+}
+
+// Assuming categoryLengths contains the categories and their lengths
+// Create a container element to hold the category list
+let container = document.createElement('div');
+counting.appendChild(container);
+
+let ul = document.createElement('ul');
+for (let category in categoryLengths) {
+	if (categoryLengths.hasOwnProperty(category)) {
+		let li = document.createElement('li');
+		li.textContent = `${category} - ${categoryLengths[category]}`;
+		ul.appendChild(li);
+	}
+}
+document.body.appendChild(ul);

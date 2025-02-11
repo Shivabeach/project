@@ -1,16 +1,11 @@
 /** @format */
-import {
-	createElement,
-	sanitizeInput,
-	properCase,
-	select,
-	log,
-} from './utils.js';
+import { createElement, properCase, select, log } from './utils.js';
 let facts = [];
 const form = document.querySelector('#form_update');
 const comment = document.querySelector('.comment-container');
 const think = document.querySelector('.think');
 const notes = document.querySelector('.notes');
+const counting = document.querySelector('.category-count');
 
 //collect values from form, then send them to local storage functin
 function arr() {
@@ -46,14 +41,10 @@ function displayStore(facts) {
 	}
 }
 
-// function catCount(facts) {
-// 	const result = facts.filter((item) => item.category === item.category);
-// 	// console.log(result);
-// 	result.forEach(function (items) {
-// 		const html = `<li>${items.category} - ${items.category.length}</li>`;
-// 		counting.innerHTML = html;
-// 	});
-// }
+function catCount(facts) {
+	const kvPairs = Object.entries(facts);
+	const map = new Map(kvPairs);
+}
 
 // addEventListener('DOMContentLoaded', catCount);
 
@@ -72,4 +63,40 @@ if (think) {
 	think.addEventListener('keyup', () => {
 		notes.textContent = think.value;
 	});
+}
+
+// ==========================================================================
+// Display category and length
+// ==========================================================================
+// Step 1: Retrieve the records from local storage
+let records = JSON.parse(localStorage.getItem('records'));
+
+// Step 2: Separate the category values
+let categories = records.map((record) => record.category);
+
+// Step 3: Map the values
+let categoryMap = categories.reduce((acc, category) => {
+	acc[category] = (acc[category] || 0) + 1;
+	return acc;
+}, {});
+
+// Step 4: Determine the lengths of each category
+let categoryLengths = {};
+for (let category in categoryMap) {
+	categoryLengths[category] = categoryMap[category];
+}
+
+// Assuming categoryLengths contains the categories and their lengths
+// Create a container element to hold the category list
+let container = document.createElement('div');
+counting.appendChild(container);
+
+// Iterate through the categoryLengths object
+for (let category in categoryLengths) {
+	if (categoryLengths.hasOwnProperty(category)) {
+		// Create a paragraph element for each category
+		let paragraph = document.createElement('p');
+		paragraph.textContent = `${category} - ${categoryLengths[category]}`;
+		container.appendChild(paragraph);
+	}
 }

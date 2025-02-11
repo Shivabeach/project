@@ -312,7 +312,7 @@ h6 {
 /** @format */
 button {
   font-family: "Consolas", "monaco", monospace;
-  font-size: 18px;
+  font-size: 36px;
   color: #f1f1d5;
   padding: 8px 15px;
   background: #4A85D1;
@@ -529,6 +529,17 @@ label {
   font-size: 18px;
 }
 
+.top {
+  display: flex;
+}
+
+.inliner {
+  display: inline;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 4px 0 4px;
+}
+
 /** @format */
 /**
  * Cards
@@ -683,6 +694,10 @@ header {
   grid-column: 11/13;
 }
 
+.full {
+  grid-column: 3/11;
+}
+
 footer {
   grid-column: 1/13;
 }
@@ -691,6 +706,7 @@ footer {
   margin-top: 2rem;
 }
 
+.full,
 .one,
 .two,
 .three,

@@ -24,6 +24,13 @@ class Pages extends CI_Controller {
 		$this->load->view("header/header", $data);
 		$this->load->view("pages/colors", $data);
 	}
+	public function tabs()
+	{
+		$data["title"] = "Tab Prime";
+		$data["header"] = "Tab Vision";
+		$this->load->view("header/header", $data);
+		$this->load->view("pages/tabs", $data);
+	}
 
 }
 
