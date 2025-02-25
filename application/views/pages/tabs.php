@@ -16,7 +16,7 @@
 </div>
 <div class="full text--color">
 	<section>
-		<header class="container top">Tabs
+		<header class="container top">
 			<ul class="inline">
 				<li class="inliner fruit">Fruit</li>
 				<li class="inliner meat">Meat</li>

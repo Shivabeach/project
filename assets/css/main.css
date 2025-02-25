@@ -312,7 +312,7 @@ h6 {
 /** @format */
 button {
   font-family: "Consolas", "monaco", monospace;
-  font-size: 36px;
+  font-size: 24px;
   color: #f1f1d5;
   padding: 8px 15px;
   background: #4A85D1;
@@ -537,7 +537,8 @@ label {
   display: inline;
   justify-content: space-around;
   align-items: center;
-  padding: 0 4px 0 4px;
+  border: 1px solid #fff;
+  padding: 0 4px 0 4px0;
 }
 
 /** @format */
@@ -552,8 +553,8 @@ label {
   shape-outside: circle(50%);
   display: grid;
   place-items: center;
-  height: 120px;
-  width: 120px;
+  height: 140px;
+  width: 140px;
   border-radius: 50%;
   background-image: radial-gradient(#ffff80, #004000, #ffff80);
   color: #004000;
