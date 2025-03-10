@@ -24,15 +24,12 @@
 		<p>
 		<button type="submit" class="submit">Submit</button>&nbsp;<button type="reset" class="reset">Reset</button></p>
 	</form>
-	<section class="values"></section>
+<section class="values"></section>
 </div>
-
 </section>
-
 </div>
 <div class="three">
 <header class="container top">Categories</header>
-
 </div>
 <div class="four text--color">
 <header class="container top">TBD</header>

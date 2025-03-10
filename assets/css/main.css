@@ -560,6 +560,10 @@ label {
   color: #004000;
 }
 
+.circle:hover {
+  background-image: radial-gradient(#ffff80, #004000, #004000);
+}
+
 @property --lewd {
   syntax: "<color>";
   inherits: false;
