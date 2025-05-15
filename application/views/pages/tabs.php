@@ -18,11 +18,11 @@
 	<section>
 		<header class="container top">
 			<ul class="inline">
-				<li class="inliner fruit">Fruit</li>
-				<li class="inliner meat">Meat</li>
-				<li class="inliner veg">Vegtable</li>
-				<li class="inliner oils">Oils</li>
-				<li class="inliner nuts">Nuts</li>
+				<button class="tablinks fs-3">Fruit</button>
+				<button class="tablinks fs-3">Meat</button>
+				<button class="tablinks fs-3">Vegtable</button>
+				<button class="tablinks fs-3">Oils</button>
+				<button class="tablinks fs-3">Nuts</button>
 			</ul>
 		</header>
 	</section>
