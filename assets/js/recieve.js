@@ -3,7 +3,7 @@
 const comments = document.querySelector('.comments-container');
 const forms = document.querySelector('#forms');
 const reset = document.querySelector('.reset');
-const count = document.querySelector('.counts');
+//const count = document.querySelector('.counts');
 const counting = document.querySelector('.category-count');
 let facts = [];
 

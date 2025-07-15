@@ -647,11 +647,12 @@ label {
 /** @format */
 /* main theme colors */
 body {
-  background: linear-gradient(45deg, yellow, hsl(6.29, 100%, 41.18%));
+  background-image: radial-gradient(#800000, #ff8040, #800000);
 }
 
 .text--color {
-  background-color: hsl(14, 63%, 27%);
+  background-image: url("./images/noisy-texture-200x200.png");
+  background-image: repeat;
   color: #F0BCAD;
 }
 
@@ -670,6 +671,11 @@ header {
 .dark {
   background-color: #521B29;
   color: white;
+}
+
+.category-count {
+  background-image: url("./images/Untitled.png");
+  background-image: repeat;
 }
 
 /** @format */

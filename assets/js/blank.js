@@ -39,33 +39,18 @@ function displayStore(facts) {
 //Filter
 const filter = array.filter((arr) => arr.category === value);
 
-let day;
-switch (new Date().getDay()) {
-	case 0:
-		day = 'Sunday';
-		break;
-	case 1:
-		day = 'Monday';
-		break;
-	case 2:
-		day = 'Tuesday';
-		break;
-	case 3:
-		day = 'Wednesday';
-		break;
-	case 4:
-		day = 'Thursday';
-		break;
-	case 5:
-		day = 'Friday';
-		break;
-	case 6:
-		day = 'Saturday';
-		break;
-	default:
-		day = 'unknown';
-}
-document.getElementById('demo').innerHTML = 'Today is ' + day;
+
+const days = [
+	'Sunday',
+	'Monday',
+	'Tuesday',
+	'Wednesday',
+	'Thursday',
+	'Friday',
+	'Saturday',
+];
+const day = days[new Date().getDay()] || 'unknown';
+hello.innerHTML = 'Today is ' + day;
 
 // Retrieve the current records from localStorage
 let records = JSON.parse(localStorage.getItem('records')); // Check if records is an array
@@ -80,7 +65,12 @@ if (Array.isArray(records)) {
 function displayMenuButtons() {
 	const categories = menu.reduce(
 		function (values, item) {
-			if (!values.includes(item.category)) {
+const demoElement = document.getElementById('demo');
+if (demoElement) {
+	demoElement.innerHTML = 'Today is ' + day;
+} else {
+	console.warn("Element with ID 'demo' not found in the DOM.");
+}
 				values.push(item.category);
 			}
 			return values;
@@ -153,3 +143,13 @@ for (let category in categoryLengths) {
 	}
 }
 document.body.appendChild(ul);
+
+//keyup
+const input = document.querySelector("input");
+const log = document.getElementById("log");// where the text
+
+input.addEventListener("keyup", logKey);
+
+function logKey(e) {
+  log.textContent += ` ${e.code}`;
+}

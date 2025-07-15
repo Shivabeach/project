@@ -1,2 +1,0 @@
-"use strict";var forms=document.querySelector(".forms"),facts=[];function recieve(){var e=localStorage.getItem("records");if(null!=e)return facts=JSON.parse(e)}function get(){seperate(document.querySelector("#gat").value)}function seperate(e){facts.filter((function(t){return t.category===e}))}forms.addEventListener("submit",(function(e){e.preventDefault(),recieve(),get()}));
-//# sourceMappingURL=recieve-dist.js.map

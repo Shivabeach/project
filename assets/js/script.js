@@ -1,5 +1,6 @@
 /** @format */
-import { properCase, log, listen, months, addToArray } from './utils.js';
+
+//import { properCase, log, listen, months, addToArray } from './utils.js';
 
 const datey = document.querySelector('.datey');
 const copyr = document.querySelector('.copyr');
@@ -28,30 +29,14 @@ for (let i = 0; i < document.links.length; i++) {
 	}
 }
 
-let day;
-switch (new Date().getDay()) {
-	case 0:
-		day = 'Sunday';
-		break;
-	case 1:
-		day = 'Monday';
-		break;
-	case 2:
-		day = 'Tuesday';
-		break;
-	case 3:
-		day = 'Wednesday';
-		break;
-	case 4:
-		day = 'Thursday';
-		break;
-	case 5:
-		day = 'Friday';
-		break;
-	case 6:
-		day = 'Saturday';
-		break;
-	default:
-		day = 'unknown';
-}
-hello.innerHTML = `Today is ${day}`;
+const days = [
+	'Sunday',
+	'Monday',
+	'Tuesday',
+	'Wednesday',
+	'Thursday',
+	'Friday',
+	'Saturday',
+];
+const day = days[new Date().getDay()] || 'unknown';
+hello.innerHTML = 'Today is ' + day;

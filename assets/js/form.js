@@ -88,14 +88,14 @@ for (let category in categoryMap) {
 
 // Assuming categoryLengths contains the categories and their lengths
 // Create a container element to hold the category list
-let container = document.createElement('div');
+let container = document.createElement('ul');
 counting.appendChild(container);
 
 // Iterate through the categoryLengths object
 for (let category in categoryLengths) {
 	if (categoryLengths.hasOwnProperty(category)) {
 		// Create a paragraph element for each category
-		let paragraph = document.createElement('p');
+		let paragraph = document.createElement('li');
 		paragraph.textContent = `${category} - ${categoryLengths[category]}`;
 		container.appendChild(paragraph);
 	}

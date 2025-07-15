@@ -12,8 +12,8 @@
 	</ul>
 	<h3 class="hello bold-7"></h3>
 
-	<ul class="category-count">
-	</ul>
+	<div class="category-count">
+	</div>
 </div>
 <div class="two text--color counter">
 	<section>
