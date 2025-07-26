@@ -14,6 +14,7 @@
 
 	<div class="category-count">
 	</div>
+	<div class="visits"></div>
 </div>
 <div class="two text--color counter">
 	<section>

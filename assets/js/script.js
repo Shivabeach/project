@@ -8,6 +8,7 @@ let count = 0;
 const links = document.querySelector('.links');
 const comment = document.querySelector('.comment-container');
 const hello = document.querySelector('.hello');
+const visits = document.querySelector('.visits');
 
 function returnDate() {
 	const date = new Date();
@@ -40,3 +41,11 @@ const days = [
 ];
 const day = days[new Date().getDay()] || 'unknown';
 hello.innerHTML = 'Today is ' + day;
+
+function visiting() {
+	let visit = 0;
+	let enter = parseInt(visit) + parseInt(1);
+	visits.textContent = `${enter} visits`;
+}
+
+addEventListener('DOMContentLoaded', visiting);

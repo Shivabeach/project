@@ -6,6 +6,7 @@ const comment = document.querySelector('.comment-container');
 const think = document.querySelector('.think');
 const notes = document.querySelector('.notes');
 const counting = document.querySelector('.category-count');
+const results = document.querySelector('.results');
 
 //collect values from form, then send them to local storage functin
 function arr() {
@@ -89,7 +90,9 @@ for (let category in categoryMap) {
 // Assuming categoryLengths contains the categories and their lengths
 // Create a container element to hold the category list
 let container = document.createElement('ul');
-counting.appendChild(container);
+if (counting) {
+	counting.appendChild(container);
+}
 
 // Iterate through the categoryLengths object
 for (let category in categoryLengths) {
@@ -99,4 +102,13 @@ for (let category in categoryLengths) {
 		paragraph.textContent = `${category} - ${categoryLengths[category]}`;
 		container.appendChild(paragraph);
 	}
+}
+if (form) {
+	form.addEventListener('submit', logs);
+}
+function logs() {
+	let thinking = think.value;
+	let cat = select.value;
+	const displays = `<p>Posted ${thinking}</p>`;
+	results.innerHTML = displays;
 }

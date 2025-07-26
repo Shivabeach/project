@@ -27,8 +27,10 @@
 		</select>
 		<p>
 		<button type="submit" class="submit">Submit</button>&nbsp;<button type="reset" class="reset">Reset</button></p>
-	</fieldset></form>
+	</form>
+</fieldset>
 </section>
+<div class="results"></div>
 </div>
 <div class="three text--color article-counter">
 <header class="container top">Notes</header>

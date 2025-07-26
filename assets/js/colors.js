@@ -14,7 +14,8 @@ function colorize() {
 	const rad = `radial-gradient(${color1}, ${color2}, ${color3})`;
 	if (linear.checked) {
 		three.style.backgroundImage = line;
-	} else if (radial.checked) {
+	}
+	if (radial.checked) {
 		three.style.backgroundImage = rad;
 	}
 	values.innerHTML = `Gradient Values: ${color1}, - ${color2}, - ${color3}`;
