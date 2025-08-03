@@ -1,0 +1,2 @@
+"use strict";document.addEventListener("DOMContentLoaded",(function(){var t=localStorage.getItem("visitCount");t=t?parseInt(t,10):0,t++,localStorage.setItem("visitCount",t);var e=document.querySelector(".visits");e&&(e.innerHTML='Page visits: <span class="fs-3 bold-8">'.concat(t,"</span>"))}));
+//# sourceMappingURL=visits-dist.js.map

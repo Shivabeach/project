@@ -644,6 +644,10 @@ label {
   color: hsl(286, 96%, 98%);
 }
 
+.big {
+  font-size: 1rem;
+}
+
 /** @format */
 /* main theme colors */
 body {

@@ -71,12 +71,13 @@ if (demoElement) {
 } else {
 	console.warn("Element with ID 'demo' not found in the DOM.");
 }
-				values.push(item.category);
+	values.push(item.category);
 			}
 			return values;
-		},
+		,
 		['all']
 	);
+}
 	const categoryBtns = categories
 		.map(function (category) {
 			return `<button type="button" class="filter-btn" data-id=${category}>
@@ -152,4 +153,10 @@ input.addEventListener("keyup", logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;
+}
+
+function bmi() {
+	let mass = 238
+	let height = 67
+	return mass / height ** 2
 }

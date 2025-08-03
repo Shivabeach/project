@@ -63,5 +63,6 @@
 <script type="text/javascript" src="<?php echo base_url('assets/dist/js/script-dist.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/dist/js/form-dist.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/dist/js/recieve-dist.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/dist/js/visits-dist.js');?>"></script>
 </body>
 </html>
