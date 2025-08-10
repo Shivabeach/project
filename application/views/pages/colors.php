@@ -1,4 +1,4 @@
-<body>
+<body class="body">
 <header class="text--color fs-8">Pilot page</header>
 <main class="page">
 	<div class="one text--color">

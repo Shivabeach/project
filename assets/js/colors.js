@@ -1,6 +1,7 @@
 /** @format */
 const three = document.querySelector('.three');
 const color = document.querySelector('#color');
+const body = document.querySelector('.body');
 
 function colorize() {
 	const color1 = document.querySelector('.color1').value;
@@ -16,7 +17,7 @@ function colorize() {
 		three.style.backgroundImage = line;
 	}
 	if (radial.checked) {
-		three.style.backgroundImage = rad;
+		body.style.backgroundImage = rad;
 	}
 	values.innerHTML = `Gradient Values: ${color1}, - ${color2}, - ${color3}`;
 }

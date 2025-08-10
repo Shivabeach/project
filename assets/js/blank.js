@@ -39,7 +39,6 @@ function displayStore(facts) {
 //Filter
 const filter = array.filter((arr) => arr.category === value);
 
-
 const days = [
 	'Sunday',
 	'Monday',
@@ -62,51 +61,51 @@ if (Array.isArray(records)) {
 }
 //From https://github.com/john-smilga/javascript-basic-projects/blob/master/08-menu/final/app.js
 // https://www.youtube.com/watch?v=3PHXvlpOkf4&t=5943s
-function displayMenuButtons() {
-	const categories = menu.reduce(
-		function (values, item) {
-const demoElement = document.getElementById('demo');
-if (demoElement) {
-	demoElement.innerHTML = 'Today is ' + day;
-} else {
-	console.warn("Element with ID 'demo' not found in the DOM.");
-}
-	values.push(item.category);
-			}
-			return values;
-		,
-		['all']
-	);
-}
-	const categoryBtns = categories
-		.map(function (category) {
-			return `<button type="button" class="filter-btn" data-id=${category}>
+// function displayMenuButtons() {
+// 	const categories = menu.reduce(
+// 		function (values, item) {
+// const demoElement = document.getElementById('demo');
+// if (demoElement) {
+// 	demoElement.innerHTML = 'Today is ' + day;
+// } else {
+// 	console.warn("Element with ID 'demo' not found in the DOM.");
+// }
+// 	values.push(item.category);
+// 			}
+// 			return values;
+// 		,
+// 		['all']
+// 	);
+// }
+const categoryBtns = categories
+	.map(function (category) {
+		return `<button type="button" class="filter-btn" data-id=${category}>
           ${category}
         </button>`;
-		})
-		.join('');
-	btnContainer.innerHTML = categoryBtns;
-	const filterBtns = btnContainer.querySelectorAll('.filter-btn');
-	console.log(filterBtns);
+	})
+	.join('');
+btnContainer.innerHTML = categoryBtns;
+const filterBtns = btnContainer.querySelectorAll('.filter-btn');
+console.log(filterBtns);
 
-	filterBtns.forEach(function (btn) {
-		btn.addEventListener('click', function (e) {
-			// console.log(e.currentTarget.dataset);
-			const category = e.currentTarget.dataset.id;
-			const menuCategory = menu.filter(function (menuItem) {
-				// console.log(menuItem.category);
-				if (menuItem.category === category) {
-					return menuItem;
-				}
-			});
-			if (category === 'all') {
-				diplayMenuItems(menu);
-			} else {
-				diplayMenuItems(menuCategory);
+filterBtns.forEach(function (btn) {
+	btn.addEventListener('click', function (e) {
+		// console.log(e.currentTarget.dataset);
+		const category = e.currentTarget.dataset.id;
+		const menuCategory = menu.filter(function (menuItem) {
+			// console.log(menuItem.category);
+			if (menuItem.category === category) {
+				return menuItem;
 			}
 		});
+		if (category === 'all') {
+			diplayMenuItems(menu);
+		} else {
+			diplayMenuItems(menuCategory);
+		}
 	});
-}
+});
+
 // ==========================================================================
 // retrieve one key from local storage
 // ==========================================================================
@@ -146,17 +145,28 @@ for (let category in categoryLengths) {
 document.body.appendChild(ul);
 
 //keyup
-const input = document.querySelector("input");
-const log = document.getElementById("log");// where the text
+const input = document.querySelector('input');
+const log = document.getElementById('log'); // where the text
 
-input.addEventListener("keyup", logKey);
+input.addEventListener('keyup', logKey);
 
 function logKey(e) {
-  log.textContent += ` ${e.code}`;
+	log.textContent += ` ${e.code}`;
 }
 
 function bmi() {
-	let mass = 238
-	let height = 67
-	return mass / height ** 2
+	let mass = 238;
+	let height = 67;
+	return mass / height ** 2;
+}
+
+//word counter. textarea with #chars & #words div
+//https://www.youtube.com/watch?v=hSyhsMpu5O8&list=TLPQMDcwODIwMjUH432mXRpaJw&index=4
+function count() {
+	//textarea text
+	const val = document.getElementById('text').value;
+	document.getElementById('chars').textContent = val.lengths;
+	document.getElementById('words').textContent = val.trim()
+		? vaal.trim().split(/\s+/).length
+		: 0;
 }
