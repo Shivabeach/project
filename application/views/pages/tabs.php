@@ -6,12 +6,7 @@
 	<div class="one text--color">
 	<header class="container top">Lessons</header>
 	<p>Lessons I have learned about my diabetes</p>
-	<ul>
-		<li><?php echo anchor("pages/", "Home");?></li>
-		<li><?php echo anchor("pages/forms", "Forms");?></li>
-		<li><?php echo anchor("pages/colors", "Colors");?></li>
-		<li><?php echo anchor("pages/tabs", "Tabs");?></li>
-	</ul>
+	<?php $this->load->view("menu/menu");?>
 	<h3 class="hello bold-7"></h3>
 </div>
 <div class="full text--color">
@@ -25,6 +20,22 @@
 				<button class="tablinks fs-3">Nuts</button>
 			</ul>
 		</header>
+	</section>
+	<section class="medicine">
+		<table>
+			<tr>
+				<th class="med-header">Start Date</th>
+				<th class="med-header">Medicine</th>
+				<th class="med-header">Dose</th>
+				<th class="med-header">End Date</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</table>
 	</section>
 </div>
 

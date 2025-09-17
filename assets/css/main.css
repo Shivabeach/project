@@ -1,6 +1,20 @@
 /** @format */
 /** @format */
 /** @format */
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/** @format */
 :root {
   --yellow-hue: 60;
   --green-hue: 120;
@@ -638,6 +652,7 @@ label {
   background: hsl(286, 96%, 98%);
   color: hsl(233, 36%, 70%) !important;
   text-decoration: underline;
+  font-family: "Space Grotesk";
 }
 
 .white {
@@ -646,6 +661,24 @@ label {
 
 .big {
   font-size: 1rem;
+}
+
+/** @format */
+/** @format */
+table {
+  width: 95%;
+  margin: 10px auto 0;
+}
+
+.med-header {
+  font-size: 1.25em;
+  font-family: "Space Grotesk", "Arial", sans-serif;
+}
+
+td,
+th {
+  border: 1px solid silver;
+  text-align: center;
 }
 
 /** @format */
@@ -708,7 +741,7 @@ header {
   justify-content: space-around;
   align-items: center;
   height: 100px;
-  font-family: "Georgia", "Times", "Times New Roman", serif;
+  font-family: "Space Grotesk", arial;
   font-size: 3rem;
 }
 

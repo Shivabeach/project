@@ -27,7 +27,7 @@ header {
 	@include center(space-around, center);
 	height: 100px;
 	@extend .container;
-	font-family: $heading-font-family;
+	font-family: 'Space Grotesk', arial;
 	font-size: 3rem;
 }
 .top {

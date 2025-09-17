@@ -16,12 +16,13 @@ class Forms extends CI_Controller {
 		$this->form_validation->set_rules('think', 'category required', 'required');
 		$this->form_validation->set_rules('selected', 'Category required', 'required');
 		if($this->form_validation->run() === FALSE) {
-      echo validation_errors();
       $this=>load=>view("pages/index");
+      echo validation_errors();
     }else {
 			$this->db->insert("facts", $data);
 		}
 	}
+
 
 }
 

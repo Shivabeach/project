@@ -7,6 +7,7 @@ const think = document.querySelector('.think');
 const notes = document.querySelector('.notes');
 const counting = document.querySelector('.category-count');
 const results = document.querySelector('.results');
+const meds = select('#meds');
 
 //collect values from form, then send them to local storage functin
 function arr() {
@@ -112,3 +113,7 @@ function logs() {
 	const displays = `<p>Posted ${thinking}</p>`;
 	results.innerHTML = displays;
 }
+
+meds.addEventListener('submit', (e) => {
+	e.preventDefault();
+});

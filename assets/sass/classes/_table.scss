@@ -1,0 +1,16 @@
+/** @format */
+@use '../abstracts' as *;
+table {
+	width: 95%;
+	margin: 10px auto 0;
+}
+.med-header {
+	font-size: 1.25em;
+	font-family: $fs-space;
+}
+
+td,
+th {
+	border: 1px solid silver;
+	text-align: center;
+}

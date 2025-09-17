@@ -4,11 +4,7 @@
 	<div class="one text--color">
 	<header class="container top">Lessons</header>
 	<p>Lessons I have learned about my diabetes</p>
-	<ul>
-		<li><?php echo anchor("pages/", "Home", 'class="links"');?><span class="linker"></span></li>
-		<li><?php echo anchor("pages/forms", "Forms");?></li>
-		<li><?php echo anchor("pages/colors", "Colors");?></li>
-	</ul>
+	<?php $this->load->view("menu/menu");?>
 	<h3 class="hello bold-8"></h3>
 </div>
 <div class="two text--color">
@@ -30,6 +26,17 @@
 	</form>
 </fieldset>
 </section>
+<fieldset>
+	<legend>Populate Medicine</legend>
+	<form action="pagesM/meds" id="meds">
+		<input type="date" id="start" name="start"><label for="start">Start Date:</label>
+		<input type="text" id="medicine" name="medicine"><label for="medicine">Medicine</label>
+		<input type="text" id="dose" name="dose"><label for="dose">Dose</label>
+		<input type="date" id="end" name="end"><label for="end">End Date:</label>
+		<button type="submit" class="submit">Submit</button>
+		<button type="reset" class="reset">Reset</button>
+	</form>
+</fieldset>
 <div class="results"></div>
 </div>
 <div class="three text--color article-counter">

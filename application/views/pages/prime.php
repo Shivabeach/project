@@ -4,12 +4,7 @@
 	<div class="one text--color">
 	<header class="container top">Lessons</header>
 	<p>Lessons I have learned about my diabetes</p>
-	<ul>
-		<li><?php echo anchor("pages/", "Home");?></li>
-		<li><?php echo anchor("pages/forms", "Forms");?></li>
-		<li><?php echo anchor("pages/colors", "Colors");?></li>
-		<li><?php echo anchor("pages/tabs", "Tabs");?></li>
-	</ul>
+	<?php $this->load->view("menu/menu");?>
 	<h3 class="hello bold-7"></h3>
 
 	<div class="category-count">
@@ -64,6 +59,5 @@
 <script type="text/javascript" src="<?php echo base_url('assets/dist/js/form-dist.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/dist/js/recieve-dist.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/dist/js/visits-dist.js');?>"></script>
-scriptphp
 </body>
 </html>
