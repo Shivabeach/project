@@ -6,26 +6,21 @@
 	<p>Lessons I have learned about my diabetes</p>
 	<?php $this->load->view("menu/menu");?>
 	<h3 class="hello bold-7"></h3>
-
-	<div class="category-count">
-	</div>
+	<div class="category-count"></div>
 	<div class="visits"></div>
 </div>
 <div class="two text--color counter">
 	<section>
 	<header class="container top">Observations</header>
 	<div class="comment-container">
-
-</div>
-
+	</div>
 </section>
 </div>
-
 <div class="three text--color art-counter">
 <header class="container top">Search Categories</header>
 <section>
-	<article class="quiz">
-		<form id="forms">
+<article class="quiz">
+	<form id="forms">
 		<select name="gat" id="gat" class="gat">
 			<option value="">Pick One</option>
 			<option value="Health">Health</option>
@@ -35,20 +30,16 @@
 			<option value="Daily">Daily</option>
 		</select>
 		<button type="submit" class="submit">Submit</button>&nbsp
-		<button type="reset" class="reset">Reset</button>
+		<button type="reset" class="reseted">Reset</button>
 	</form>
-	</article>
-
+</article>
 <div class="comments-container"></div>
 </section>
 </div>
-
-
-
 <div class="four text--color">
 <header class="container top">TBD</header>
 <div class="circle">Diabetes</div>
-	<p> mellitus, often known simply as diabetes, is a group of common endocrine diseases characterized by sustained high blood sugar levels. Diabetes is due to either the pancreas not producing enough insulin, or the cells of the body becoming unresponsive to the hormone's effects. Classic symptoms include polydipsia (excessive thirst), polyuria (excessive urination), weight loss, and blurred vision. If left untreated, the disease can lead to various health complications, including disorders of the cardiovascular system, eye, kidney, and nerves.</p>
+<p> mellitus, often known simply as diabetes, is a group of common endocrine diseases characterized by sustained high blood sugar levels. Diabetes is due to either the pancreas not producing enough insulin, or the cells of the body becoming unresponsive to the hormone's effects. Classic symptoms include polydipsia (excessive thirst), polyuria (excessive urination), weight loss, and blurred vision. If left untreated, the disease can lead to various health complications, including disorders of the cardiovascular system, eye, kidney, and nerves.</p>
 </div>
 <footer class="text--color">
 <p class="datey"></p>

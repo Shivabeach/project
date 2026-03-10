@@ -114,6 +114,8 @@ function logs() {
 	results.innerHTML = displays;
 }
 
-meds.addEventListener('submit', (e) => {
-	e.preventDefault();
-});
+if (meds) {
+	meds.addEventListener('submit', (e) => {
+		e.preventDefault();
+	});
+}

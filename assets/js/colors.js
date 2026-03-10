@@ -14,7 +14,7 @@ function colorize() {
 	const line = `linear-gradient(40deg, ${color1}, ${color2}, ${color3})`;
 	const rad = `radial-gradient(${color1}, ${color2}, ${color3})`;
 	if (linear.checked) {
-		three.style.backgroundImage = line;
+		body.style.backgroundImage = line;
 	}
 	if (radial.checked) {
 		body.style.backgroundImage = rad;

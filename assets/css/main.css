@@ -684,11 +684,11 @@ th {
 /** @format */
 /* main theme colors */
 body {
-  background-image: radial-gradient(#800000, #ff8040, #800000);
+  background-image: radial-gradient(#B06853, #004000, #004000);
 }
 
 .text--color {
-  background-image: url("./images/noisy-texture-200x200.png");
+  background: transparent;
   background-image: repeat;
   color: #F0BCAD;
 }

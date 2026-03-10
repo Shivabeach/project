@@ -6,6 +6,9 @@
 	<p>Lessons I have learned about my diabetes</p>
 	<?php $this->load->view("menu/menu");?>
 	<h3 class="hello bold-8"></h3>
+	<!-- categories and counts -->
+	<div class="category-count"></div>
+
 </div>
 <div class="two text--color">
 	<section>
